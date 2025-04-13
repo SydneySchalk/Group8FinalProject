@@ -15,30 +15,29 @@ namespace Final
         }
 
         // Example: Add Fish
+
         async void OnAddFishClicked(object sender, EventArgs e)
-        {
-            async void OnAddFishClicked(object sender, EventArgs e)
             {
                 try
                 {
                     var fishList = new List<Fish> {
                         new Fish { FishID = 1, Name = "Pufferfish", Spring = false, Summer = true, Fall = false, Winter = false, Sun = true, Rain = false, Time = "12pm-4pm", Image = "Images/pufferfish.png", Obtained = false }
-                    };
+                };
 
-                    await _database.AddFishBatchAsync(fishList);
+                await _database.AddFishBatchAsync(fishList);
 
-                    MainThread.BeginInvokeOnMainThread(() =>
-                    {
-                        // UI confirmation of fish added
-                    });
-                }
-                catch (InvalidOperationException ex)
+                MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    Debug.WriteLine($"AddFish Error: {ex.Message}");
-                }
+                    // UI confirmation of fish added
+                });
             }
-
+                catch (InvalidOperationException ex)
+            {
+            Debug.WriteLine($"AddFish Error: {ex.Message}");
         }
+    }
+
+        
 
         // Add Location
         async void OnAddLocationClicked(object sender, EventArgs e)
@@ -67,15 +66,33 @@ namespace Final
 
         private async void LoadFish()
         {
-            var fishWithLocations = await App.Database.GetFishWithLocationsAsync();
-
-            var displayList = fishWithLocations.Select(fwl => new
+            try
             {
-                Fish = fwl.Fish,
-                LocationsDisplay = string.Join(", ", fwl.Locations)
-            }).ToList();
+                var fishWithLocations = await App.Database.GetFishWithLocationsAsync();
+                Debug.WriteLine($"Loaded {fishWithLocations?.Count ?? 0} fish");
 
-            FishCollectionView.ItemsSource = displayList;
+                // Check if the returned list is null or empty
+                if (fishWithLocations == null || !fishWithLocations.Any())
+                {
+                    Debug.WriteLine("No fish with locations found.");
+                    return;
+                }
+
+                // Safely handle null properties for Fish and Locations
+                var displayList = fishWithLocations.Select(fwl => new
+                {
+                    Fish = fwl.Fish,
+                    LocationsDisplay = string.Join(", ", fwl.Locations.Select(loc => loc.LocationName))
+                }).ToList();
+
+
+                // Bind the data to the collection view
+                FishCollectionView.ItemsSource = displayList;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error loading fish: {ex.Message}");
+            }
         }
     }
 

@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\databaseaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\databaseaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\models\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\models\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\databaseaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\databaseaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\models\\fishlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\models\\fishlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|c:\\users\\tadpo\\onedrive\\documents\\college\\final\\final\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{74DD1B4E-49DA-4A43-82BB-81D082514701}|Final\\Final.csproj|solutionrelative:final\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,14 +55,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\App.xaml",
-              "RelativeDocumentMoniker": "Final\\App.xaml",
-              "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\App.xaml",
-              "RelativeToolTip": "Final\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-13T20:10:33.4Z",
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "Final\\Models\\Location.cs",
+              "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\Location.cs",
+              "RelativeToolTip": "Final\\Models\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T20:55:21.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\.gitignore",
+              "RelativeDocumentMoniker": "Final\\.gitignore",
+              "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\.gitignore",
+              "RelativeToolTip": "Final\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-13T20:47:21.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FishLocation.cs",
+              "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\FishLocation.cs",
+              "RelativeDocumentMoniker": "Final\\Models\\FishLocation.cs",
+              "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\FishLocation.cs",
+              "RelativeToolTip": "Final\\Models\\FishLocation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T20:35:14.987Z",
               "EditorCaption": ""
             },
             {
@@ -73,84 +99,59 @@
               "RelativeDocumentMoniker": "Final\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\MainPage.xaml.cs",
               "RelativeToolTip": "Final\\MainPage.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAnwFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswEgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T10:14:54.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Location.cs",
-              "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\Location.cs",
-              "RelativeDocumentMoniker": "Final\\Models\\Location.cs",
-              "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\Location.cs",
-              "RelativeToolTip": "Final\\Models\\Location.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T10:02:54.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\App.xaml.cs",
               "RelativeDocumentMoniker": "Final\\App.xaml.cs",
               "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\App.xaml.cs",
               "RelativeToolTip": "Final\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T09:59:45.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Fish.cs",
-              "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\Fish.cs",
-              "RelativeDocumentMoniker": "Final\\Models\\Fish.cs",
-              "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\Models\\Fish.cs",
-              "RelativeToolTip": "Final\\Models\\Fish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T09:56:39.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\MauiProgram.cs",
               "RelativeDocumentMoniker": "Final\\MauiProgram.cs",
               "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\MauiProgram.cs",
               "RelativeToolTip": "Final\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T09:59:36.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\MainPage.xaml",
               "RelativeDocumentMoniker": "Final\\MainPage.xaml",
               "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\MainPage.xaml",
               "RelativeToolTip": "Final\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-27T09:59:24.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DatabaseAccess.cs",
               "DocumentMoniker": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\DatabaseAccess.cs",
               "RelativeDocumentMoniker": "Final\\DatabaseAccess.cs",
               "ToolTip": "C:\\Users\\tadpo\\OneDrive\\Documents\\College\\Final\\Final\\DatabaseAccess.cs",
               "RelativeToolTip": "Final\\DatabaseAccess.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAwGIAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T09:54:51.474Z",
               "EditorCaption": ""

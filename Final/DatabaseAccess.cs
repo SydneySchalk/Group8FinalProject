@@ -29,6 +29,10 @@ namespace Final
 
         }
 
+
+        //<-----Adding Stuff----->//
+
+
         // Add Fish
         public async Task<int> AddFishAsync(Fish fish)
         {
@@ -50,6 +54,10 @@ namespace Final
             return await _database.InsertAsync(fishLocation);
         }
 
+        
+        //<-----Getting Stuff----->//
+
+
         // Get all Fish
         public async Task<List<Fish>> GetFishAsync()
         {
@@ -69,6 +77,25 @@ namespace Final
         {
             await Init();
             return await _database.Table<FishLocation>().ToListAsync();
+        }
+
+        public async Task<List<FishWithLocations>> GetFishWithLocationsAsync()
+        {
+            var fishList = await GetFishAsync();
+            var locations = await GetLocationsAsync();
+            var fishLocations = await GetFishLocationsAsync();
+
+            var result = fishList.Select(fish => new FishWithLocations
+            {
+                Fish = fish,
+                Locations = fishLocations
+                    .Where(fl => fl.FishID == fish.FishID)
+                    .Select(fl => locations.FirstOrDefault(loc => loc.LocationID == fl.LocationID))
+                    .Where(loc => loc != null)
+                    .ToList()
+            }).ToList();
+
+            return result;
         }
 
         // Associate Fish with a Location
@@ -93,30 +120,13 @@ namespace Final
             return await _database.InsertAllAsync(locationList); // Inserts all locations into the database
         }
 
-        public async Task<List<FishWithLocations>> GetFishWithLocationsAsync()
-        {
-            var fishList = await GetFishAsync();
-            var locations = await GetLocationsAsync();
-            var fishLocations = await GetFishLocationsAsync();
-
-            var result = fishList.Select(fish => new FishWithLocations
-            {
-                Fish = fish,
-                Locations = fishLocations
-                            .Where(fl => fl.FishID == fish.FishID)
-                            .Select(fl => locations.FirstOrDefault(loc => loc.LocationID == fl.LocationID)?.LocationName)
-                            .Where(name => !string.IsNullOrEmpty(name))
-                            .ToList()
-            }).ToList();
-
-            return result;
-        }
+        
 
         public class FishWithLocations
         {
             public Fish Fish { get; set; }
-            public List<string> Locations { get; set; }
-            public string LocationsDisplay => string.Join(", ", Locations);
+            public List<Location> Locations { get; set; }
+            public string LocationsDisplay => string.Join(", ", Locations.Select(l => l.LocationName));
         }
 
         public async Task AddSampleData()
