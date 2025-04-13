@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Location = Final.Models.Location;
 
 namespace Final
 {
@@ -46,28 +47,28 @@ namespace Final
         public async Task<int> AddFishLocationAsync(FishLocation fishLocation)
         {
             await Init();
-            return await _database.InsertAsync(fishLocation); // Inserts FishLocation into the database
+            return await _database.InsertAsync(fishLocation);
         }
 
         // Get all Fish
         public async Task<List<Fish>> GetFishAsync()
         {
             await Init();
-            return await _database.Table<Fish>().ToListAsync(); // Returns list of all Fish
+            return await _database.Table<Fish>().ToListAsync();
         }
 
         // Get all Locations
         public async Task<List<Models.Location>> GetLocationsAsync()
         {
             await Init();
-            return await _database.Table<Models.Location>().ToListAsync(); // Returns list of all Locations
+            return await _database.Table<Models.Location>().ToListAsync();
         }
 
         // Get all FishLocation (relationships between Fish and Location)
         public async Task<List<FishLocation>> GetFishLocationsAsync()
         {
             await Init();
-            return await _database.Table<FishLocation>().ToListAsync(); // Returns list of all FishLocation relationships
+            return await _database.Table<FishLocation>().ToListAsync();
         }
 
         // Associate Fish with a Location
@@ -92,6 +93,59 @@ namespace Final
             return await _database.InsertAllAsync(locationList); // Inserts all locations into the database
         }
 
+        public async Task<List<FishWithLocations>> GetFishWithLocationsAsync()
+        {
+            var fishList = await GetFishAsync();
+            var locations = await GetLocationsAsync();
+            var fishLocations = await GetFishLocationsAsync();
+
+            var result = fishList.Select(fish => new FishWithLocations
+            {
+                Fish = fish,
+                Locations = fishLocations
+                            .Where(fl => fl.FishID == fish.FishID)
+                            .Select(fl => locations.FirstOrDefault(loc => loc.LocationID == fl.LocationID)?.LocationName)
+                            .Where(name => !string.IsNullOrEmpty(name))
+                            .ToList()
+            }).ToList();
+
+            return result;
+        }
+
+        public class FishWithLocations
+        {
+            public Fish Fish { get; set; }
+            public List<string> Locations { get; set; }
+            public string LocationsDisplay => string.Join(", ", Locations);
+        }
+
+        public async Task AddSampleData()
+        {
+            // Adding fish
+            var fishList = new List<Fish>
+            {
+                new Fish { Name = "Pufferfish", Spring = false, Summer = true, Fall = false, Winter = false, Sun = true, Rain = false, Time = "12pm-4pm", Image = "pufferfish.png", Obtained = false },
+                new Fish { Name = "Pufferfish", Spring = false, Summer = true, Fall = false, Winter = false, Sun = true, Rain = false, Time = "12pm-4pm", Image = "pufferfish.png", Obtained = false },
+                new Fish { Name = "Pufferfish", Spring = false, Summer = true, Fall = false, Winter = false, Sun = true, Rain = false, Time = "12pm-4pm", Image = "pufferfish.png", Obtained = false }
+            };
+
+            await AddFishBatchAsync(fishList);
+
+            // Adding locations
+            var locationList = new List<Location>
+            {
+                new Location { LocationName = "River" },
+                new Location { LocationName = "Lake" },
+                new Location { LocationName = "Ocean" }
+            };
+
+            await AddLocationBatchAsync(locationList);
+
+            // Associating fish with locations
+            await AssociateFishWithLocationAsync(1, 1);
+            await AssociateFishWithLocationAsync(2, 2);
+            await AssociateFishWithLocationAsync(3, 3);
+        }
     }
 }
 
