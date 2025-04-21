@@ -1,4 +1,5 @@
 ﻿using Final.Models;
+using Microsoft.Maui.Devices.Sensors;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -194,20 +195,80 @@ namespace Final
 
             await AddFishBatchAsync(fishList);
 
+
+
             // Adding locations
             var locationList = new List<Location>
-            {
-                new Location { LocationName = "River" },
-                new Location { LocationName = "Lake" },
-                new Location { LocationName = "Ocean" }
+{
+                new Location { LocationID = 1,LocationName = "River" },
+                new Location { LocationID = 2, LocationName = "Lake" },
+                new Location { LocationID = 3, LocationName = "Ocean" },
+                new Location { LocationID = 4, LocationName = "NightMarket" },
+                new Location { LocationID = 5, LocationName = "Mines" },
+                new Location { LocationID = 6, LocationName = "Waterfalls" },
+                new Location { LocationID = 7, LocationName = "Sewers" },
+                new Location { LocationID = 8, LocationName = "Desert" },
+                new Location { LocationID = 9, LocationName = "Mutant Bug Lair" },
+                new Location { LocationID = 10, LocationName = "Ginger Island" },
+                new Location { LocationID = 11, LocationName = "Witch's Swamp" },
+                new Location { LocationID = 12, LocationName = "Secret Woods" }
             };
 
-            await AddLocationBatchAsync(locationList);
-
-            // Associating fish with locations
-            await AssociateFishWithLocationAsync(1, 1);
-            await AssociateFishWithLocationAsync(2, 2);
-            await AssociateFishWithLocationAsync(3, 3);
+            await AssociateFishWithLocationAsync(1, 3);
+            await AssociateFishWithLocationAsync(2, 3);
+            await AssociateFishWithLocationAsync(3, 1);
+            await AssociateFishWithLocationAsync(5, 4); //(Review wit group)
+            await AssociateFishWithLocationAsync(6, 1);
+            await AssociateFishWithLocationAsync(7, 1);
+            await AssociateFishWithLocationAsync(8, 2);
+            await AssociateFishWithLocationAsync(9, 2);
+            await AssociateFishWithLocationAsync(10, 1);
+            await AssociateFishWithLocationAsync(11, 1);
+            await AssociateFishWithLocationAsync(12, 3);
+            await AssociateFishWithLocationAsync(13, 1);
+            await AssociateFishWithLocationAsync(14, 3);
+            await AssociateFishWithLocationAsync(15, 3);
+            await AssociateFishWithLocationAsync(16, 5);
+            await AssociateFishWithLocationAsync(17, 1);
+            await AssociateFishWithLocationAsync(18, 6);
+            await AssociateFishWithLocationAsync(19, 3);
+            await AssociateFishWithLocationAsync(20, 3);
+            await AssociateFishWithLocationAsync(21, 5);
+            await AssociateFishWithLocationAsync(22, 2);
+            await AssociateFishWithLocationAsync(23, 5);
+            await AssociateFishWithLocationAsync(24, 2);
+            await AssociateFishWithLocationAsync(25, 1);
+            await AssociateFishWithLocationAsync(26, 3);
+            await AssociateFishWithLocationAsync(27, 2);
+            await AssociateFishWithLocationAsync(28, 4);
+            await AssociateFishWithLocationAsync(29, 7);
+            await AssociateFishWithLocationAsync(30, 3);
+            await AssociateFishWithLocationAsync(31, 1);
+            await AssociateFishWithLocationAsync(32, 1);
+            await AssociateFishWithLocationAsync(33, 1);
+            await AssociateFishWithLocationAsync(34, 3);
+            await AssociateFishWithLocationAsync(35, 3);
+            await AssociateFishWithLocationAsync(36, 1);
+            await AssociateFishWithLocationAsync(37, 8);
+            await AssociateFishWithLocationAsync(38, 3);
+            await AssociateFishWithLocationAsync(39, 8);
+            await AssociateFishWithLocationAsync(40, 3);
+            await AssociateFishWithLocationAsync(41, 1);
+            await AssociateFishWithLocationAsync(42, 9);
+            await AssociateFishWithLocationAsync(43, 2);
+            await AssociateFishWithLocationAsync(44, 4);
+            await AssociateFishWithLocationAsync(45, 3);
+            await AssociateFishWithLocationAsync(46, 10);
+            await AssociateFishWithLocationAsync(47, 5);
+            await AssociateFishWithLocationAsync(48, 2);
+            await AssociateFishWithLocationAsync(49, 1);
+            await AssociateFishWithLocationAsync(50, 3);
+            await AssociateFishWithLocationAsync(51, 1);
+            await AssociateFishWithLocationAsync(52, 3);
+            await AssociateFishWithLocationAsync(53, 3);
+            await AssociateFishWithLocationAsync(54, 11);
+            await AssociateFishWithLocationAsync(55, 1);
+            await AssociateFishWithLocationAsync(56, 12);
         }
     }
 }

@@ -1,15 +1,22 @@
-﻿using Final.Models;
-using SQLite;
-using System.ComponentModel.DataAnnotations.Schema;
-using Location = Final.Models.Location;
+﻿using SQLite;
 
-public class FishLocation
+namespace Final.Models
 {
-    [PrimaryKey, AutoIncrement]
-    public int ID { get; set; }
-    public int FishID { get; set; }
-    public int LocationID { get; set; }
+    public class FishLocation
+    {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
 
-    public Fish Fish { get; set; }
-    public Location Location { get; set; }
+        // Foreign Key for Fish
+        public int FishID { get; set; }
+
+        // Foreign Key for Location
+        public int LocationID { get; set; }
+
+        // Navigation properties for Fish and Location
+        [Ignore]  // Ignored by SQLite, not stored in the DB, but useful for object relationships
+        public Fish Fish { get; set; }
+        [Ignore]
+        public Location Location { get; set; }
+    }
 }

@@ -10,9 +10,9 @@ namespace Final
             try
             {
                 InitializeComponent();
-                MainPage = new MainPage();
                 Database = new DatabaseAccess();
                 Task.Run(async () => await Database.Init());
+                MainPage = new MainPage();
             }
             catch (Exception ex)
             {
