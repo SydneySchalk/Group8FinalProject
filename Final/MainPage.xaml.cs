@@ -1,99 +1,24 @@
-﻿using Final.Models;
-using System.Diagnostics;
-
-namespace Final
+﻿namespace Final
 {
     public partial class MainPage : ContentPage
     {
-        private DatabaseAccess _database;
+        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
-            _database = new DatabaseAccess();
-            LoadFish();
         }
 
-        // Example: Add Fish
+        private void OnCounterClicked(object sender, EventArgs e)
+        {
+            count++;
 
-        async void OnAddFishClicked(object sender, EventArgs e)
-            {
-                try
-                {
-                    var fishList = new List<Fish> {
-                        new Fish { FishID = 1, Name = "Pufferfish", Spring = false, Summer = true, Fall = false, Winter = false, Sun = true, Rain = false, Time = "12pm-4pm", Image = "Images/pufferfish.png", Obtained = false }
-                };
+            if (count == 1)
+                CounterBtn.Text = $"Clicked {count} time";
+            else
+                CounterBtn.Text = $"Clicked {count} times";
 
-                await _database.AddFishBatchAsync(fishList);
-
-                MainThread.BeginInvokeOnMainThread(() =>
-                {
-                    // UI confirmation of fish added
-                });
-            }
-                catch (InvalidOperationException ex)
-            {
-            Debug.WriteLine($"AddFish Error: {ex.Message}");
+            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
-
-        
-
-        // Add Location
-        async void OnAddLocationClicked(object sender, EventArgs e)
-        {
-            var locationList = new List<Models.Location>
-            {
-                new Models.Location { LocationID = 1, LocationName = "Mountain Lake" },
-                //...
-            };
-            await _database.AddLocationBatchAsync(locationList);
-        }
-
-        // Associate Fish with Location
-        async void OnAssociateFishWithLocationClicked(object sender, EventArgs e)
-        {
-            // Assuming you have Fish ID 1 and Location ID 1
-            await _database.AssociateFishWithLocationAsync(1, 1);
-        }
-
-        // Get FishLocations (Fish and their Locations)
-        async void OnViewFishLocationsClicked(object sender, EventArgs e)
-        {
-            var fishLocations = await _database.GetFishLocationsAsync();
-
-        }
-
-        private async void LoadFish()
-        {
-            try
-            {
-                var fishWithLocations = await App.Database.GetFishWithLocationsAsync();
-                Debug.WriteLine($"Loaded {fishWithLocations?.Count ?? 0} fish");
-
-                // Check if the returned list is null or empty
-                if (fishWithLocations == null || !fishWithLocations.Any())
-                {
-                    Debug.WriteLine("No fish with locations found.");
-                    return;
-                }
-
-                // Safely handle null properties for Fish and Locations
-                var displayList = fishWithLocations.Select(fwl => new
-                {
-                    Fish = fwl.Fish,
-                    LocationsDisplay = string.Join(", ", fwl.Locations.Select(loc => loc.LocationName))
-                }).ToList();
-
-
-                // Bind the data to the collection view
-                FishCollectionView.ItemsSource = displayList;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error loading fish: {ex.Message}");
-            }
-        }
-    }
-
 }

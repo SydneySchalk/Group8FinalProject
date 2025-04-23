@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Final.Views.FishDetailsPage"
+             Title="{Binding Name}">
+    <StackLayout Padding="10">
+        <Image Source="{Binding Image}" HeightRequest="200" />
+        <Label Text="{Binding Name}" FontSize="30" FontAttributes="Bold" />
+        <Label Text="Season:" FontSize="20" />
+        <Label Text="{Binding Season}" FontSize="20" />
+        <Label Text="Weather:" FontSize="20" />
+        <Label Text="{Binding Weather}" FontSize="20" />
+        <Label Text="Time:" FontSize="20" />
+        <Label Text="{Binding Time}" FontSize="20" />
+    </StackLayout>
+</ContentPage>
